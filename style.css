@@ -5,7 +5,13 @@ html, body {
     -webkit-box-sizing: border-box;
     font-family: 'Bahnschrift';
     color: #ff0068;
-    cursor: url(./img/cursor.svg), auto;
+    cursor: url('./img/cursor.svg') 10 10, auto;
+}
+a, button {
+    text-decoration: none;
+    color: #ff0068;
+    cursor: url('./img/cursor.svg') 10 10, auto;
+    outline: none;
 }
 .title {
     width: 100%;
@@ -20,6 +26,7 @@ html, body {
     background-position: center;
     background-size: 110%;
     position: relative;
+    z-index: -1;
 }
 .mask {
     position: absolute;
@@ -67,10 +74,10 @@ html, body {
     right: 0;
 }
 .txt.top .nav-btn {
-    margin-right: 20px
+    margin-right: 10px
 }
 .txt.bot .nav-btn {
-    margin-left: 20px
+    margin-left: 10px
 }
 .cursor {
     height: 20px;
@@ -81,6 +88,50 @@ html, body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 0;
     transition-timing-function: linear;
+}
+.modal-closer {
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.modal-position {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal {
+    height: 100%;
+    width: 100%;
+    background: #222;
+    max-width: 400px;
+    max-height: 200px;
+    border-radius: 15px;
+}
+.modal-body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.modal-txt {
+    padding: 14px;
+    text-align: center;
+    line-height: 24px;
+}
+.btn-wrapper .c {
+    background: #ff0068;
+    border: none;
+    color: #f4f4f4;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-weight: 700;
 }
