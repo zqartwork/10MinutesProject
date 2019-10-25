@@ -7,6 +7,15 @@ html, body {
     color: #ff0068;
     cursor: url('./img/cursor.svg') 10 10, auto;
 }
+p, div {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
 a, button {
     text-decoration: none;
     color: #ff0068;
@@ -24,9 +33,10 @@ a, button {
     width: 100%;
     background-image: url(./img/bg.jpg);
     background-position: center;
-    background-size: 110%;
+    background-size: cover cover;
     position: relative;
     z-index: -1;
+    background-repeat: no-repeat;
 }
 .mask {
     position: absolute;
